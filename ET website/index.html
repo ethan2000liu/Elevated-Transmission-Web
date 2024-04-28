@@ -22,7 +22,32 @@
 
 	<!-- Head Libs -->
 	<script async src="assets/vendors/modernizr.min.js"></script>
+	<style>
+		/* Styling for the submit button when it's disabled */
+		input[type="submit"][disabled] {
+			background-color: #cccccc;
+			/* Gray color for disabled button */
+			cursor: not-allowed;
+			/* Change cursor to indicate disabled state */
+		}
 
+		/* Styling for success message */
+		.success-message {
+			color: green;
+			font-size: 1.2em;
+			margin-top: 10px;
+			display: none;
+			/* Hidden by default */
+		}
+
+		.error-message {
+			color: red;
+			font-size: 1.2em;
+			margin-top: 10px;
+			display: none;
+			/* Hidden by default */
+		}
+	</style>
 </head>
 
 <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-align="left" data-mobile-nav-style="minimal"
@@ -111,7 +136,7 @@
 									<a class="navbar-brand" href="#home" rel="home">
 										<span class="navbar-brand-inner">
 											<img src="assets/img/logo/ET Logo Vectors Final.svg"
-													alt="Elevated Transmission" width="200" height="200">
+												alt="Elevated Transmission" width="200" height="200">
 										</span>
 									</a>
 									<button type="button" class="navbar-toggle collapsed nav-trigger style-mobile"
@@ -136,7 +161,8 @@
 										data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }'>
 
 										<li>
-											<a href="#home" style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
+											<a href="#home"
+												style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -145,7 +171,8 @@
 											</a>
 										</li>
 										<li>
-											<a href="#services" style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
+											<a href="#services"
+												style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -155,7 +182,8 @@
 										</li>
 
 										<li>
-											<a href="#why-us" style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
+											<a href="#why-us"
+												style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -164,7 +192,8 @@
 											</a>
 										</li>
 										<li>
-											<a href="#career" style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
+											<a href="#career"
+												style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -173,7 +202,8 @@
 											</a>
 										</li>
 										<li>
-											<a href="#contact" style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
+											<a href="#contact"
+												style="font-weight: bold; font-size: 21px; color: rgb(0, 255, 17);">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -390,7 +420,7 @@
 						<div class="lqd-column col-md-6 col-md-offset-1">
 
 
-							
+
 							<header class="fancy-title">
 								<h2>Why Choose Elevated Transmission?</h2>
 							</header><!-- /.fancy-title -->
@@ -518,38 +548,103 @@
 
 								<div
 									class="contact-form contact-form-inputs-sm contact-form-inputs-underlined contact-form-button-md contact-form-button-block">
-									<form action="your_form_handler.php" method="post" novalidate="novalidate">
+									<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
 										<div class="row">
+											<input type="hidden" name="access_key"
+												value="80be73f5-4f93-4950-986b-6964d769a121">
 											<div class="lqd-column col-md-12">
 												<label for="name">Name:</label>
 												<input type="text" id="name" name="name" aria-required="true"
-													aria-invalid="false" placeholder="Name" required>
+													placeholder="Name" required>
 											</div>
 											<div class="lqd-column col-md-12">
 												<label for="email">Email:</label>
 												<input type="email" id="email" name="email" aria-required="true"
-													aria-invalid="false" placeholder="Email address" required>
+													placeholder="Email address" required>
 											</div>
 											<div class="lqd-column col-md-12">
 												<label for="message">Your Message:</label>
 												<textarea cols="10" rows="3" id="message" name="message"
-													aria-required="true" aria-invalid="false" placeholder="Your Message"
-													required></textarea>
+													aria-required="true" placeholder="Your Message" required></textarea>
 											</div>
 											<div class="lqd-column col-md-12 text-md-right">
-												<input type="submit" value="Send Message"
-													class="font-size-13 text-uppercase ltr-sp-2 font-weight-semibold text-dark w-100">
+												<input type="submit" value="Send Message" id="submit-btn"
+													class="font-size-13 text-uppercase ltr-sp-2 font-weight-semibold text-dark w-100"
+													disabled>
 											</div>
+										</div>
+										<div class="success-message" id="success-message">
+											Your message has been sent! Thank you.
+										</div>
+										<div class="error-message" id="error-message">
+											Oops! There was an error sending your message. Please try again.
 										</div>
 									</form>
 								</div>
+
+								<script>
+									document.addEventListener("DOMContentLoaded", function () {
+										const form = document.getElementById("contact-form");
+										const submitBtn = document.getElementById("submit-btn");
+										const successMessage = document.getElementById("success-message");
+										const errorMessage = document.getElementById("error-message");
+
+										// Function to check if all required fields are filled
+										const checkFormValidity = () => {
+											const isFormValid = form.checkValidity(); // Use built-in form validation
+											submitBtn.disabled = !isFormValid; // Toggle 'disabled' based on form validity
+										};
+
+										// Function to reset the form and show a success message
+										const handleSuccess = () => {
+											form.reset(); // Reset the form
+											successMessage.style.display = "block"; // Show success message
+											setTimeout(() => {
+												successMessage.style.display = "none"; // Hide success message after a few seconds
+											}, 3000); // Change the timeout duration as needed
+										};
+
+										// Function to handle form submission
+										const handleFormSubmission = (event) => {
+											event.preventDefault(); // Prevent default form submission
+											const formData = new FormData(form);
+
+											// Send the form data using fetch
+											fetch(form.action, {
+												method: "POST",
+												body: formData,
+											})
+												.then((response) => {
+													if (response.ok) {
+														handleSuccess(); // Show success message and reset the form
+													} else {
+														throw new Error("Error submitting the form");
+													}
+												})
+												.catch((error) => {
+													errorMessage.style.display = "block"; // Show error message
+													console.error(error);
+												});
+										};
+
+										// Attach event listeners to input fields
+										const inputs = form.querySelectorAll("input[required], textarea[required]");
+										inputs.forEach(input => {
+											input.addEventListener("input", checkFormValidity);
+										});
+
+										// Attach event listener for form submission
+										form.addEventListener("submit", handleFormSubmission);
+
+										// Initial check on page load
+										checkFormValidity();
+									});
+								</script>
+
+
+
+
 							</div>
-						</div>
-					</div>
-
-
-
-				</div>
 			</section>
 
 
