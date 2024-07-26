@@ -1238,7 +1238,9 @@ figure + .ld-cart-product-details { margin-left: 15px; }
   transform: translateY(-50%);
 }
 
-
+.iconbox li i {
+  color: #ffc70a; /* Sets the color to red */
+}
 
 .iconbox .iconbox-icon-container {
   display: flex;
