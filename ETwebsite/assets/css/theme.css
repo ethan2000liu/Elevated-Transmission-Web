@@ -27906,10 +27906,3 @@ body.search .no-results .search-form input[type=submit] {
     width: calc( 100vw - 40px ) !important;
   }
 }
-
-
-/* Custom */
-.bullet-list li {
-  font-size: 160px;
-  margin-bottom: 5px;
-}
