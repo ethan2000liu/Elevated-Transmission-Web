@@ -1218,6 +1218,23 @@ figure + .ld-cart-product-details { margin-left: 15px; }
   80% { border-width: 1px; -webkit-transform: scale(1.36); transform: scale(1.36); }
   100% { opacity: 0; } }
 /* Icon Box */
+
+.iconbox li {
+  display: list-item; /* Ensure proper list item display */
+  font-size: 18px; /* Adjust font size as needed */
+  color: #333; /* Adjust color as needed */
+  list-style-type: none; /* Removes default bullet points */
+  position: relative; /* Necessary for absolute positioning of the icon */
+  padding-left: 20px; /* Adjust padding to accommodate the icon */
+}
+
+.iconbox li .iconbox-icon-container {
+  position: absolute;
+  left: 0;
+  top: 50%; /* Center the icon vertically */
+  transform: translateY(-50%); /* Adjust for icon height */
+}
+
 .iconbox { display: -webkit-box; display: flex; margin-bottom: 2em; position: relative; -webkit-box-align: center; align-items: center; -webkit-box-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; text-align: center; -webkit-transition: box-shadow 0.3s ease, background 0.3s ease; transition: box-shadow 0.3s ease, background 0.3s ease; }
 .iconbox .iconbox-icon-container, .iconbox .contents, .iconbox > h3 { position: relative; z-index: 2; }
 .iconbox .iconbox-icon-container, .iconbox p, .iconbox h3 { -webkit-transition-property: color, background; transition-property: color, background; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease; transition-timing-function: ease; }
@@ -1237,6 +1254,7 @@ figure + .ld-cart-product-details { margin-left: 15px; }
 .iconbox.text-left { -webkit-box-align: start; align-items: flex-start; }
 .iconbox.text-right { -webkit-box-align: end; align-items: flex-end; }
 .iconbox:hover .iconbox-fill-el, .iconbox:hover .iconbox-icon-hover-bg { opacity: 1; }
+
 
 [data-animate-icon=true] .iconbox-icon-container > svg, [data-animate-icon=true] .iconbox-icon-container > object { opacity: 0; }
 [data-animate-icon=true].iconbox-icon-animating .iconbox-icon-container > svg, [data-animate-icon=true].iconbox-icon-animating .iconbox-icon-container > object { opacity: 1; }
