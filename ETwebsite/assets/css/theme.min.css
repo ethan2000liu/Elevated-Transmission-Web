@@ -1228,7 +1228,7 @@ figure + .ld-cart-product-details { margin-left: 15px; }
   display: list-item;
   font-size: 18px;
   color: #333333;
-  list-style-type: none;
+  list-style-type: none; 
 }
 
 .iconbox li .iconbox-icon-container {
