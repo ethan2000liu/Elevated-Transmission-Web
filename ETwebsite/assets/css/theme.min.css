@@ -1219,21 +1219,30 @@ figure + .ld-cart-product-details { margin-left: 15px; }
   100% { opacity: 0; } }
 /* Icon Box */
 
+.iconbox ul {
+  padding: 0;
+  margin: 0;
+}
+
 .iconbox li {
-  display: list-item; /* Ensure proper list item display */
-  font-size: 18px; /* Adjust font size as needed */
-  color: #333; /* Adjust color as needed */
-  list-style-type: none; /* Removes default bullet points */
-  position: relative; /* Necessary for absolute positioning of the icon */
-  padding-left: 20px; /* Adjust padding to accommodate the icon */
+  display: list-item;
+  font-size: 18px;
+  color: #333333;
+  list-style-type: none;
 }
 
 .iconbox li .iconbox-icon-container {
   position: absolute;
-  left: 0;
-  top: 50%; /* Center the icon vertically */
-  transform: translateY(-50%); /* Adjust for icon height */
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
+
+
+
+
+
 
 .iconbox { display: -webkit-box; display: flex; margin-bottom: 2em; position: relative; -webkit-box-align: center; align-items: center; -webkit-box-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; text-align: center; -webkit-transition: box-shadow 0.3s ease, background 0.3s ease; transition: box-shadow 0.3s ease, background 0.3s ease; }
 .iconbox .iconbox-icon-container, .iconbox .contents, .iconbox > h3 { position: relative; z-index: 2; }
