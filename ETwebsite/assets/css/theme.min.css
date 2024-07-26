@@ -1,5 +1,21 @@
 /* Name:        Ave - Main styles Written by: 	LiquidThemes Version:			1.6
 */
+
+
+
+.container {
+  width: 80%;
+}
+
+/* Prevent text wrapping */
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* Adjust word wrapping */
+.word-wrap {
+  word-wrap: break-word;
+}
 /*---------------------------------------- [ TABLE OF CONTENTS ]
  1. BASE
 		|- 1.1. Base
