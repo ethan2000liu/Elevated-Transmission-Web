@@ -16,6 +16,28 @@
 .word-wrap {
   word-wrap: break-word;
 }
+
+
+
+
+/* Banner */
+
+.banner-container {
+  width: 100%;
+  height: 50px; /* Adjust height as needed */
+  background-color: #f0f0f0; /* Background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-message {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
 /*---------------------------------------- [ TABLE OF CONTENTS ]
  1. BASE
 		|- 1.1. Base
