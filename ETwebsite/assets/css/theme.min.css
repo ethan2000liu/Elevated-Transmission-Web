@@ -716,7 +716,7 @@ small,
 .main-header .col-xl-auto {
   position: relative;
   width: 100%;
-  min-height: 1px;
+  min-height: 0px;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -2409,6 +2409,15 @@ figure+.ld-cart-product-details {
 /*
 	Nav Styles
 */
+
+#home {
+  padding-top: 100px; /* Adjust the value as needed */
+}
+
+.mainbar-wrap {
+  position: relative; /* Or static */
+}
+
 .mainbar-wrap .row {
   flex-wrap: nowrap;
 }
