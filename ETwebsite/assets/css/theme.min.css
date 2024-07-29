@@ -42,6 +42,15 @@
   /* Adjust this value as needed */
 }
 
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .banner-message {
+    font-size: 15px; /* Reduce font size for smaller screens */
+  }
+}
+
+
 .banner-message {
   font-size: 27px;
   color: #d5eb0f;
@@ -85,19 +94,6 @@
   /* Remove default margin */
 }
 
-@media (max-width: 768px) {
-  /* For screens smaller than 768px */
-  .container {
-    width: 90%; /* Make the container more narrow */
-  }
-  .header {
-    text-align: center; /* Center the header content */
-  }
-  .image {
-    width: 100%; /* Make images full width */
-    height: auto; /* Maintain aspect ratio */
-  }
-}
 
 
 /*---------------------------------------- [ TABLE OF CONTENTS ]
