@@ -85,6 +85,21 @@
   /* Remove default margin */
 }
 
+@media (max-width: 768px) {
+  /* For screens smaller than 768px */
+  .container {
+    width: 90%; /* Make the container more narrow */
+  }
+  .header {
+    text-align: center; /* Center the header content */
+  }
+  .image {
+    width: 100%; /* Make images full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+
 /*---------------------------------------- [ TABLE OF CONTENTS ]
  1. BASE
 		|- 1.1. Base
