@@ -2498,9 +2498,24 @@ figure+.ld-cart-product-details {
   z-index: 10;
 }
 
+.secondarybar-row .green-text {
+  color: rgb(0, 255, 0);
+}
+
+.secondarybar-row .iconbox-icon-wrap + h3 {
+  color: rgb(0, 255, 0);
+}
+.secondarybar-row .iconbox h3 {
+  color: rgb(0, 255, 0);
+  font-size: 30px;
+}
+
+
 .secondarybar-wrap {
   position: relative;
   z-index: 11;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .secondarybar-wrap~.secondarybar-wrap {
@@ -2534,8 +2549,8 @@ figure+.ld-cart-product-details {
 }
 
 .secondarybar .header-module {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 @-webkit-keyframes stickySlideDown {
