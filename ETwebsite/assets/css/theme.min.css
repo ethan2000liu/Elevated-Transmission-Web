@@ -46,7 +46,8 @@
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .banner-message {
-    font-size: 15px; /* Reduce font size for smaller screens */
+    font-size: 15px;
+    /* Reduce font size for smaller screens */
   }
 }
 
@@ -92,6 +93,39 @@
 .hours-overlay p {
   margin: 0;
   /* Remove default margin */
+}
+
+
+
+
+.partner-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Adjusts spacing between items */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.partner-grid li {
+  flex: 1 1 calc(33.333% - 20px);
+  /* Allows for three items per row */
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.partner-grid li img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.partner-grid li p {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -2422,11 +2456,13 @@ figure+.ld-cart-product-details {
 */
 
 #home {
-  padding-top: 150px; /* Adjust the value as needed */
+  padding-top: 150px;
+  /* Adjust the value as needed */
 }
 
 .mainbar-wrap {
-  position: relative; /* Or static */
+  position: relative;
+  /* Or static */
 }
 
 .mainbar-wrap .row {
@@ -2502,9 +2538,10 @@ figure+.ld-cart-product-details {
   color: rgb(0, 255, 0);
 }
 
-.secondarybar-row .iconbox-icon-wrap + h3 {
+.secondarybar-row .iconbox-icon-wrap+h3 {
   color: rgb(0, 255, 0);
 }
+
 .secondarybar-row .iconbox h3 {
   color: rgb(0, 255, 0);
   font-size: 30px;
