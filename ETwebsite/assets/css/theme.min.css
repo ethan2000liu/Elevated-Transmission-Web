@@ -1,6 +1,41 @@
 /* Name:        Ave - Main styles Written by: 	LiquidThemes Version:			1.6
 */
 
+.partner-list {
+  margin-top: 30px; /* Adds space above the partner list */
+}
+
+.partner-list h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Adds space below the heading */
+}
+
+.partner-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.partner-list li {
+  margin-bottom: 10px; /* Adds space between the partners */
+}
+
+.partner-list a {
+  color: #0056b3; /* Link color */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.partner-list a:hover {
+  text-decoration: underline;
+}
+
+/* Ensures responsiveness */
+@media (max-width: 768px) {
+  .partner-list {
+      text-align: left; /* Adjusts alignment on smaller screens */
+  }
+}
 
 
 /* Social icons alignment */
