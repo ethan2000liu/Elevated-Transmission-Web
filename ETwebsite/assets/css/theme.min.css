@@ -1,6 +1,31 @@
 /* Name:        Ave - Main styles Written by: 	LiquidThemes Version:			1.6
 */
 
+
+
+/* Social icons alignment */
+.social-icon {
+  display: flex; /* Enables flexbox for horizontal layout */
+  justify-content: center; /* Center-align the icons */
+  gap: 15px; /* Adds spacing between the icons */
+  margin-top: 20px; /* Adds space above the icons */
+  padding: 10px; /* Adds padding around the social icons */
+  z-index: 3; /* Keep them on top */
+}
+
+/* Adjust individual icon spacing if needed */
+.social-icon li {
+  list-style: none;
+}
+
+/* Ensure icons stay horizontal on small screens */
+@media (max-width: 768px) {
+  .social-icon {
+      justify-content: center; /* Keep icons centered on smaller screens */
+  }
+}
+
+
 /* Ensure contact info is positioned at the top */
 .header-module {
   position: absolute;
