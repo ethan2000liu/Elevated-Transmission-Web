@@ -1,6 +1,62 @@
 /* Name:        Ave - Main styles Written by: 	LiquidThemes Version:			1.6
 */
 
+/* Ensure contact info is positioned at the top */
+.header-module {
+  position: absolute;
+  top: 20px; /* Positioning it at the top */
+  right: 0;
+  left: 0;
+  z-index: 3; /* Higher z-index so it sits on top */
+  text-align: center;
+  margin: 0;
+  padding: 10px 20px;
+  color: #00FF11;
+}
+
+/* Social icons positioning */
+.social-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+}
+
+/* Hero text spacing adjustments */
+#home h2, #home h6 {
+  position: relative;
+  z-index: 2;
+  margin-top: 150px; /* Adds space from the top */
+  padding: 0 20px;
+}
+
+/* Add more padding to prevent overlap */
+#home {
+  padding-top: 250px; /* Push the home section further down */
+  padding-bottom: 100px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  /* Contact info and social icons stacked and centered */
+  .header-module, .social-icon {
+      position: relative;
+      top: auto;
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  /* Adjust hero section text margin */
+  #home h2, #home h6 {
+      margin-top: 100px;
+  }
+
+  /* Adjust padding */
+  #home {
+      padding-top: 150px;
+      padding-bottom: 80px;
+  }
+}
 
 
 .container {
