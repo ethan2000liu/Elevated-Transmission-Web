@@ -1,33 +1,49 @@
 /* Name:        Ave - Main styles Written by: 	LiquidThemes Version:			1.6
 */
 
-.partner-list {
-  margin-top: 30px; /* Adds space above the partner list */
-}
-
+/* Partner List Styling */
 .partner-list h3 {
-  font-size: 18px;
+  font-size: 24px; /* Match the rest of the page for the heading */
   font-weight: bold;
-  margin-bottom: 10px; /* Adds space below the heading */
+  margin-bottom: 20px;
 }
 
-.partner-list ul {
+.partner-columns {
+  display: flex; /* Flexbox for two columns */
+  justify-content: space-between; /* Spread the columns apart */
+}
+
+.partner-columns ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  width: 45%; /* Set each column to take up 45% of the width */
 }
 
-.partner-list li {
-  margin-bottom: 10px; /* Adds space between the partners */
+.partner-columns li {
+  margin-bottom: 10px; /* Adds space between each vendor link */
 }
 
-.partner-list a {
-  color: #0056b3; /* Link color */
-  text-decoration: none;
-  font-size: 16px;
+.partner-columns a {
+  color: rgba(2, 105, 11, 0.822); /* Green color for hyperlinks */
+  font-size: 18px; /* Adjust the font size to match the rest of the page */
+  text-decoration: none; /* Remove underline */
+  font-weight: 600; /* Makes the links slightly bold */
 }
 
-.partner-list a:hover {
-  text-decoration: underline;
+.partner-columns a:hover {
+  text-decoration: underline; /* Show underline on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .partner-columns {
+      flex-direction: column; /* Stack the columns vertically */
+  }
+
+  .partner-columns ul {
+      width: 100%; /* Take full width for each column */
+  }
 }
 
 /* Ensures responsiveness */
