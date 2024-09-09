@@ -1,5 +1,47 @@
 /* Name:        Ave - Main styles Written by: 	LiquidThemes Version:			1.6
 */
+
+/* Footer Social Icon */
+
+.footer-social-icons {
+  display: flex;
+  justify-content: flex-start; /* Aligns items from the start (left) */
+  align-items: center; /* Aligns vertically */
+  margin-bottom: 20px; /* Space between the social icons and the logos */
+}
+
+.footer-social-icons li {
+  list-style: none;
+  margin-right: 15px; /* Adds spacing between each social icon */
+}
+
+.footer-social-icons li a {
+  background-color: #000; /* Black background for social icons */
+  padding: 10px;
+  border-radius: 50%; /* Circular icons */
+  color: white; /* Icon color */
+  display: inline-block;
+  margin-right: 10px; /* Space between icons */
+  transition: background-color 0.3s ease;
+}
+
+.footer-social-icons li a:hover {
+  background-color: #3ed2a7; /* Change color on hover */
+}
+
+.bbb-logo,
+.mfc-logo {
+  display: inline-block;
+  margin-right: 20px; /* Add space between the two logos */
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: flex-start; /* Aligns logos from the left */
+  align-items: center;
+  margin-top: 20px; /* Space between logos and social icons */
+}
+
 /* Header social link background */
 .social-icon li a {
   background-color: rgba(2, 105, 11, 0.822); /* Black background */
