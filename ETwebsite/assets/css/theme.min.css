@@ -2,7 +2,7 @@
 */
 /* Header social link background */
 .social-icon li a {
-  background-color: #000; /* Black background */
+  background-color: rgba(2, 105, 11, 0.822); /* Black background */
   padding: 10px;
   border-radius: 50%; /* Circle shape */
   color: white; /* Icon color */
