@@ -1,5 +1,21 @@
 /* Name:        Ave - Main styles Written by: 	LiquidThemes Version:			1.6
 */
+/* Header social link background */
+.social-icon li a {
+  background-color: #000; /* Black background */
+  padding: 10px;
+  border-radius: 50%; /* Circle shape */
+  color: white; /* Icon color */
+  display: inline-block;
+  margin-right: 10px; /* Spacing between icons */
+  transition: background-color 0.3s ease;
+}
+
+.social-icon li a:hover {
+  background-color: #3ed2a7; /* Green background on hover */
+}
+
+
 
 /* Partner List Styling */
 .partner-list h3 {
