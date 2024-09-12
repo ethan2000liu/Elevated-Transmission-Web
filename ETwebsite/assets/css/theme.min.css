@@ -1,5 +1,29 @@
 /* Name:        Ave - Main styles Written by: 	LiquidThemes Version:			1.6
 */
+/* Ensure the icons are centered below the navigation */
+.social-container {
+  margin-top: 10px; /* Space between menu and icons */
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon.social-icon-md {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon li {
+  margin: 0 10px; /* Space between each icon */
+}
+
+.social-icon li a {
+  color: #00FF11; /* Match the green from your navigation */
+  font-size: 20px;
+}
+
+.social-icon li a:hover {
+  color: #3ed2a7; /* Slight color shift on hover */
+}
 
 /* Footer Social Icon */
 
