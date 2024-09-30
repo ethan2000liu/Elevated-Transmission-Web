@@ -2,7 +2,8 @@
 */
 /* Ensure the icons are centered below the navigation */
 .social-container {
-  margin-top: 10px; /* Space between menu and icons */
+  margin-top: 10px;
+  /* Space between menu and icons */
   display: flex;
   justify-content: center;
 }
@@ -13,137 +14,176 @@
 }
 
 .social-icon li {
-  margin: 0 10px; /* Space between each icon */
+  margin: 0 10px;
+  /* Space between each icon */
 }
 
 .social-icon li a {
-  color: #00FF11; /* Match the green from your navigation */
+  color: #00FF11;
+  /* Match the green from your navigation */
   font-size: 20px;
 }
 
 .social-icon li a:hover {
-  color: #3ed2a7; /* Slight color shift on hover */
+  color: #3ed2a7;
+  /* Slight color shift on hover */
 }
 
 /* Footer Social Icon */
 
 .footer-social-icons {
   display: flex;
-  justify-content: flex-start; /* Aligns items from the start (left) */
-  align-items: center; /* Aligns vertically */
-  margin-bottom: 20px; /* Space between the social icons and the logos */
+  justify-content: flex-start;
+  /* Aligns items from the start (left) */
+  align-items: center;
+  /* Aligns vertically */
+  margin-bottom: 20px;
+  /* Space between the social icons and the logos */
 }
 
 .footer-social-icons li {
   list-style: none;
-  margin-right: 15px; /* Adds spacing between each social icon */
+  margin-right: 15px;
+  /* Adds spacing between each social icon */
 }
 
 .footer-social-icons li a {
-  background-color: #000; /* Black background for social icons */
+  background-color: #000;
   padding: 10px;
-  border-radius: 50%; /* Circular icons */
-  color: white; /* Icon color */
-  display: inline-block;
-  margin-right: 10px; /* Space between icons */
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  margin-right: 10px;
   transition: background-color 0.3s ease;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-social-icons li a:hover {
-  background-color: #3ed2a7; /* Change color on hover */
+  background-color: #3ed2a7;
+  /* Change color on hover */
 }
 
 .bbb-logo,
 .mfc-logo {
   display: inline-block;
-  margin-right: 20px; /* Add space between the two logos */
+  margin-right: 20px;
+  /* Add space between the two logos */
 }
 
 .footer-logos {
   display: flex;
-  justify-content: flex-start; /* Aligns logos from the left */
+  justify-content: flex-start;
+  /* Aligns logos from the left */
   align-items: center;
-  margin-top: 20px; /* Space between logos and social icons */
+  margin-top: 20px;
+  /* Space between logos and social icons */
 }
 
 /* Header social link background */
 .social-icon li a {
-  background-color: rgba(2, 105, 11, 0.822); /* Black background */
+  background-color: rgba(2, 105, 11, 0.822);
+  /* Black background */
   padding: 10px;
-  border-radius: 50%; /* Circle shape */
-  color: white; /* Icon color */
+  border-radius: 50%;
+  /* Circle shape */
+  color: white;
+  /* Icon color */
   display: inline-block;
-  margin-right: 10px; /* Spacing between icons */
+  margin-right: 10px;
+  /* Spacing between icons */
   transition: background-color 0.3s ease;
 }
 
 .social-icon li a:hover {
-  background-color: #3ed2a7; /* Green background on hover */
+  background-color: #3ed2a7;
+  /* Green background on hover */
 }
 
 
 
 /* Partner List Styling */
 .partner-list h3 {
-  font-size: 24px; /* Match the rest of the page for the heading */
+  font-size: 24px;
+  /* Match the rest of the page for the heading */
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .partner-columns {
-  display: flex; /* Flexbox for two columns */
-  justify-content: space-between; /* Spread the columns apart */
+  display: flex;
+  /* Flexbox for two columns */
+  justify-content: space-between;
+  /* Spread the columns apart */
 }
 
 .partner-columns ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 45%; /* Set each column to take up 45% of the width */
+  width: 45%;
+  /* Set each column to take up 45% of the width */
 }
 
 .partner-columns li {
-  margin-bottom: 10px; /* Adds space between each vendor link */
+  margin-bottom: 10px;
+  /* Adds space between each vendor link */
 }
 
 .partner-columns a {
-  color: rgba(2, 105, 11, 0.822); /* Green color for hyperlinks */
-  font-size: 18px; /* Adjust the font size to match the rest of the page */
-  text-decoration: none; /* Remove underline */
-  font-weight: 600; /* Makes the links slightly bold */
+  color: rgba(2, 105, 11, 0.822);
+  /* Green color for hyperlinks */
+  font-size: 18px;
+  /* Adjust the font size to match the rest of the page */
+  text-decoration: none;
+  /* Remove underline */
+  font-weight: 600;
+  /* Makes the links slightly bold */
 }
 
 .partner-columns a:hover {
-  text-decoration: underline; /* Show underline on hover */
+  text-decoration: underline;
+  /* Show underline on hover */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .partner-columns {
-      flex-direction: column; /* Stack the columns vertically */
+    flex-direction: column;
+    /* Stack the columns vertically */
   }
 
   .partner-columns ul {
-      width: 100%; /* Take full width for each column */
+    width: 100%;
+    /* Take full width for each column */
   }
 }
 
 /* Ensures responsiveness */
 @media (max-width: 768px) {
   .partner-list {
-      text-align: left; /* Adjusts alignment on smaller screens */
+    text-align: left;
+    /* Adjusts alignment on smaller screens */
   }
 }
 
 
 /* Social icons alignment */
 .social-icon {
-  display: flex; /* Enables flexbox for horizontal layout */
-  justify-content: center; /* Center-align the icons */
-  gap: 15px; /* Adds spacing between the icons */
-  margin-top: 20px; /* Adds space above the icons */
-  padding: 10px; /* Adds padding around the social icons */
-  z-index: 3; /* Keep them on top */
+  display: flex;
+  /* Enables flexbox for horizontal layout */
+  justify-content: center;
+  /* Center-align the icons */
+  /* gap: 15px; */
+  /* Adds spacing between the icons */
+  margin-top: 20px;
+  /* Adds space above the icons */
+  padding: 10px;
+  /* Adds padding around the social icons */
+  z-index: 3;
+  /* Keep them on top */
 }
 
 /* Adjust individual icon spacing if needed */
@@ -154,7 +194,8 @@
 /* Ensure icons stay horizontal on small screens */
 @media (max-width: 768px) {
   .social-icon {
-      justify-content: center; /* Keep icons centered on smaller screens */
+    justify-content: center;
+    /* Keep icons centered on smaller screens */
   }
 }
 
@@ -162,10 +203,12 @@
 /* Ensure contact info is positioned at the top */
 .header-module {
   position: absolute;
-  top: 20px; /* Positioning it at the top */
+  top: 20px;
+  /* Positioning it at the top */
   right: 0;
   left: 0;
-  z-index: 3; /* Higher z-index so it sits on top */
+  z-index: 3;
+  /* Higher z-index so it sits on top */
   text-align: center;
   margin: 0;
   padding: 10px 20px;
@@ -174,45 +217,50 @@
 
 /* Social icons positioning */
 .social-icon {
-  position: absolute;
+  /* position: absolute; */
   top: 20px;
   right: 20px;
   z-index: 3;
 }
 
 /* Hero text spacing adjustments */
-#home h2, #home h6 {
+#home h2,
+#home h6 {
   position: relative;
   z-index: 2;
-  margin-top: 150px; /* Adds space from the top */
+  margin-top: 0;
+  /* Adds space from the top */
   padding: 0 20px;
 }
 
 /* Add more padding to prevent overlap */
-#home {
-  padding-top: 250px; /* Push the home section further down */
+/* #home {
+  padding-top: 250px; 
   padding-bottom: 100px;
-}
+} */
 
 /* Adjust for smaller screens */
 @media (max-width: 768px) {
+
   /* Contact info and social icons stacked and centered */
-  .header-module, .social-icon {
-      position: relative;
-      top: auto;
-      text-align: center;
-      margin-bottom: 30px;
+  .header-module,
+  .social-icon {
+    position: relative;
+    top: auto;
+    text-align: center;
+    margin-bottom: 30px;
   }
 
   /* Adjust hero section text margin */
-  #home h2, #home h6 {
-      margin-top: 100px;
+  #home h2,
+  #home h6 {
+    margin-top: 100px;
   }
 
   /* Adjust padding */
   #home {
-      padding-top: 150px;
-      padding-bottom: 80px;
+    padding-top: 150px;
+    padding-bottom: 80px;
   }
 }
 
@@ -220,7 +268,7 @@
 
 
 .container {
-  width: 80%;
+  width: 100%;
 }
 
 /* Prevent text wrapping */
@@ -243,19 +291,17 @@
 /* Banner */
 
 .banner-container {
-  width: 100%;
-  height: 100px;
-  /* Adjust height as needed */
-  margin-top: 75px;
+  /* width: 100%; */
+  /* height: 100px; */
+  /* margin-top: 50px; */
   background-color: rgba(2, 105, 11, 0.822);
-  /* Background color */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  /* Necessary for z-index to work */
   z-index: 10;
-  /* Adjust this value as needed */
+  margin: 0 50px;
+  padding: 30px 0;
 }
 
 
@@ -929,6 +975,8 @@ small,
 .main-header .row {
   display: -webkit-box;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
@@ -998,7 +1046,7 @@ small,
 
 @media (min-width: 1200px) {
   .main-header .container {
-    max-width: 1170px;
+    /* max-width: 1170px; */
   }
 }
 
@@ -2357,7 +2405,7 @@ figure+.ld-cart-product-details {
   display: -webkit-inline-box;
   display: inline-flex;
   height: auto;
-  padding: 30px 0;
+  /* padding: 30px 0; */
   line-height: normal;
   float: none;
   -webkit-box-ordinal-group: 1;
@@ -2370,6 +2418,8 @@ figure+.ld-cart-product-details {
 .navbar-brand img {
   -webkit-transition: opacity 0.3s, visibiliy 0.3s;
   transition: opacity 0.3s, visibiliy 0.3s;
+  width: 225px !important;
+  height: auto;
 }
 
 .navbar-brand .logo-sticky {
@@ -2466,8 +2516,8 @@ figure+.ld-cart-product-details {
 }
 
 .main-nav {
-  -webkit-box-flex: 1;
-  flex: 1 auto;
+  -webkit-box-flex: 0;
+  flex: 0 auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2670,10 +2720,12 @@ figure+.ld-cart-product-details {
 /*
 	Nav Styles
 */
-
 #home {
-  padding-top: 150px;
-  /* Adjust the value as needed */
+  padding-top: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 125vh;
 }
 
 .mainbar-wrap {
@@ -2737,6 +2789,7 @@ figure+.ld-cart-product-details {
 .mainbar {
   display: -webkit-box;
   display: flex;
+  justify-content: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-flow: column wrap;
@@ -5689,6 +5742,7 @@ figure+.ld-cart-product-details {
 .iconbox li {
   display: list-item;
   font-size: 18px;
+  margin: 10px auto !important;
   color: #333333;
   list-style-type: none;
 }
@@ -5807,7 +5861,7 @@ figure+.ld-cart-product-details {
 
 .iconbox .iconbox-icon-container i {
   display: inline-block;
-  font-size: 1em;
+  font-size: 2rem;
 }
 
 .iconbox .iconbox-icon-container[data-plugin-animated-icon] {
@@ -17952,6 +18006,7 @@ ul.pagination .page-numbers.current {
 .ca-initvalues-applied {
   visibility: visible;
   opacity: 1;
+  padding: 0 50px !important;
 }
 
 .compose-mode [data-custom-animations=true] {
@@ -20626,10 +20681,10 @@ ol.breadcrumb.text-darker a:hover {
   margin-bottom: -340px;
 }
 
-.container {
+/* .container {
   max-width: 1400px;
-  /* Adjust as needed */
-}
+ 
+} */
 
 .lqd-column.pull-up-05x {
   margin-top: -4.5%;
@@ -24183,9 +24238,9 @@ body.search .no-results .search-form input[type=submit] {
   margin-top: 25px !important;
 }
 
-.mb-25 {
+/* .mb-25 {
   margin-bottom: 25px !important;
-}
+} */
 
 .pt-30 {
   padding-top: 30px !important;
@@ -24267,13 +24322,13 @@ body.search .no-results .search-form input[type=submit] {
   margin-bottom: 50px !important;
 }
 
-.pt-55 {
+/* .pt-55 {
   padding-top: 55px !important;
 }
 
 .pb-55 {
   padding-bottom: 55px !important;
-}
+} */
 
 .mt-55 {
   margin-top: 55px !important;
@@ -24347,13 +24402,13 @@ body.search .no-results .search-form input[type=submit] {
   margin-bottom: 75px !important;
 }
 
-.pt-80 {
+/* .pt-80 {
   padding-top: 80px !important;
-}
+} */
 
-.pb-80 {
+/* .pb-80 {
   padding-bottom: 80px !important;
-}
+} */
 
 .mt-80 {
   margin-top: 80px !important;
@@ -31519,6 +31574,7 @@ body.search .no-results .search-form input[type=submit] {
 */
 /* 5.4. Page Frame */
 @media screen and (min-width: 1200px) {
+
   .lqd-page-frame {
     position: absolute;
     z-index: 3;
@@ -31581,4 +31637,114 @@ body.search .no-results .search-form input[type=submit] {
   .page-has-frame .megamenu.megamenu-fullwidth .megamenu-container {
     width: calc(100vw - 40px) !important;
   }
+}
+
+#services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#why-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
+}
+
+#contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 50px 50px;
+}
+
+.contact-info ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  float: left;
+  padding: 0;
+
+}
+
+.contact-info ul li {
+  margin-bottom: 15px;
+}
+
+.contact-info ul li a {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  font-family: "Basier Square",
+    sans-serif;
+  margin: 15px auto !important;
+  color: #333;
+
+}
+
+.contact-info ul li a:hover {
+  color: #23527c;
+}
+
+.partner-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.partner-columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 45%;
+}
+
+.partner-columns li {
+  margin-bottom: 10px;
+}
+
+.partner-columns ul li a {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  font-family: "Basier Square",
+    sans-serif;
+  margin: 15px auto !important;
+  color: rgba(2, 105, 11, 0.822) !important;
+  text-align: left;
+
+}
+
+.partner-columns ul li a {
+  color: #181b31;
+}
+
+/* .partner-list {
+  display: none;
+} */
+
+.lqd-custom-menu img {
+  width: 250px !important;
+}
+
+@media (min-width:1280px) and (max-width:1600px) {
+  #home {
+    min-height: 165vh !important;
+  }
+
+  #home h2 {
+    margin-top: 100px !important;
+  }
+
+  .iconbox li,
+  .contact-info ul li a {
+    font-size: 14px !important;
+  }
+
+  .iconbox .iconbox-icon-container i {
+    display: inline-block;
+    font-size: 1rem;
+  }
+
 }
