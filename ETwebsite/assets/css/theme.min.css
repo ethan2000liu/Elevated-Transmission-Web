@@ -102,8 +102,6 @@
   /* Green background on hover */
 }
 
-
-
 /* Partner List Styling */
 .partner-list h3 {
   font-size: 24px;
@@ -161,6 +159,15 @@
   }
 }
 
+.vendor-list {
+  padding: 35px 85px;
+  color: #333;
+}
+
+.vendorlist ul li a {
+  color: #333;
+}
+
 /* Ensures responsiveness */
 @media (max-width: 768px) {
   .partner-list {
@@ -168,7 +175,6 @@
     /* Adjusts alignment on smaller screens */
   }
 }
-
 
 /* Social icons alignment */
 .social-icon {
@@ -794,7 +800,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 40px;
+  font-size: 35px;
 }
 
 h3,
@@ -31720,9 +31726,13 @@ body.search .no-results .search-form input[type=submit] {
   color: #181b31;
 }
 
-/* .partner-list {
-  display: none;
-} */
+.partner-list {
+  display: block;
+}
+
+.contact-info {
+  padding-top: 100px;
+}
 
 .lqd-custom-menu img {
   width: 250px !important;
@@ -31747,4 +31757,9 @@ body.search .no-results .search-form input[type=submit] {
     font-size: 1rem;
   }
 
+}
+
+#our-partners_section {
+  display: none;
+  flex-direction: column;
 }
