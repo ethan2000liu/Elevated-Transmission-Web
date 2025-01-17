@@ -724,6 +724,11 @@
 														placeholder="Email address" required>
 												</div>
 												<div class="lqd-column col-md-12">
+													<label for="phone">Phone Number:</label>
+													<input type="tel" id="phone" name="phone" aria-required="true"
+														placeholder="Phone number" required>
+												</div>
+												<div class="lqd-column col-md-12">
 													<label for="message">Your Message:</label>
 													<textarea cols="10" rows="3" id="message" name="message"
 														aria-required="true" placeholder="Your Message"
@@ -770,6 +775,12 @@
 											const handleFormSubmission = (event) => {
 												event.preventDefault(); // Prevent default form submission
 												const formData = new FormData(form);
+												
+												// Add this to verify form data
+												console.log('Form data being sent:');
+												for (let pair of formData.entries()) {
+													console.log(pair[0] + ': ' + pair[1]);
+												}
 
 												// Send the form data using fetch
 												fetch(form.action, {
