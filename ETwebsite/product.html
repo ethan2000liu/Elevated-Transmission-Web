@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transmission Filters</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .filter {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 200px;
+      box-sizing: border-box;
+    }
+
+    .search-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .search-input {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
+    }
+
+    .search-btn {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      font-size: 16px;
+      width: 100%;
+      max-width: 120px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .filters {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-input, .search-btn {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 15px;
+      }
+
+      .card h3 {
+        font-size: 16px;
+      }
+
+      .card p {
+        font-size: 12px;
+      }
+    }
+
+    .header {
+      background-color: #333;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: rgb(0, 255, 17);
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="nav-links">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/logo/ET Logo Vectors Final.svg" alt="Elevated Transmission">
+        </a>
+      </div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="product.html">Products</a>
+        <a href="index.html#why-us">Why Us?</a>
+        <a href="index.html#career">Career</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="filters">
+      <!-- Transmission Year Dropdown -->
+      <select class="filter" id="yearFilter">
+        <option value="">Transmission Year</option>
+      </select>
+      
+      <!-- Transmission Make Dropdown -->
+      <select class="filter" id="makeFilter">
+        <option value="">Transmission Make</option>
+        <option value="Honda">Honda</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Ford">Ford</option>
+        <option value="BMW">BMW</option>
+        <option value="Chevrolet">Chevrolet</option>
+      </select>
+      
+      <!-- Transmission Type Dropdown -->
+      <select class="filter" id="typeFilter">
+        <option value="">Transmission Type</option>
+        <option value="Automatic">Automatic</option>
+        <option value="Manual">Manual</option>
+      </select>
+    </div>
+
+    <div class="search-container">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search by make or type">
+      <button class="search-btn" id="searchBtn">Search</button>
+    </div>
+
+    <div class="cards" id="cardsContainer">
+      <!-- Cards will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <script>
+    // Example data
+    const data = [
+      { id: 1, make: "Honda", year: 2025, type: "Automatic" },
+      { id: 2, make: "Toyota", year: 2024, type: "Manual" },
+      { id: 3, make: "Ford", year: 2020, type: "Automatic" },
+      { id: 4, make: "Chevrolet", year: 2019, type: "Manual" },
+      { id: 5, make: "BMW", year: 2018, type: "Automatic" },
+      { id: 6, make: "Honda", year: 2021, type: "Manual" },
+      { id: 7, make: "Toyota", year: 2023, type: "Automatic" },
+    ];
+
+    // Function to generate year options
+    function generateYearOptions() {
+      const yearSelect = document.getElementById('yearFilter');
+      for (let year = 2025; year >= 1996; year--) {
+        const option = document.createElement("option");
+        option.value = year;
+        option.text = year;
+        yearSelect.appendChild(option);
+      }
+    }
+
+    // Function to generate cards based on filtered data
+    function generateCards(filteredData) {
+      const cardsContainer = document.getElementById("cardsContainer");
+      cardsContainer.innerHTML = ""; // Clear existing cards
+      filteredData.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+		 <img src="assets/img/ggg.png"
+            alt="Elevated Transmission" width="230" height="200">
+          <h3>${item.make} - ${item.year}</h3>
+          <p>Transmission Type: ${item.type}</p>
+        `;
+        cardsContainer.appendChild(card);
+      });
+    }
+
+    // Function to filter data based on selected values
+    function filterData() {
+      const year = document.getElementById("yearFilter").value;
+      const make = document.getElementById("makeFilter").value.toLowerCase();
+      const type = document.getElementById("typeFilter").value.toLowerCase();
+      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+
+      const filteredData = data.filter(item => {
+        return (
+          (year === "" || item.year == year) &&
+          (make === "" || item.make.toLowerCase().includes(make)) &&
+          (type === "" || item.type.toLowerCase().includes(type)) &&
+          (searchQuery === "" || item.make.toLowerCase().includes(searchQuery) || item.type.toLowerCase().includes(searchQuery))
+        );
+      });
+
+      generateCards(filteredData);
+    }
+
+    // Event listeners for the filters and search button
+    document.getElementById("yearFilter").addEventListener("change", filterData);
+    document.getElementById("makeFilter").addEventListener("change", filterData);
+    document.getElementById("typeFilter").addEventListener("change", filterData);
+    document.getElementById("searchBtn").addEventListener("click", filterData);
+
+    // Initial setup and card generation
+    generateYearOptions();
+    generateCards(data);
+  </script>
+</body>
+</html>
