@@ -730,6 +730,14 @@
 														placeholder="Email address" required>
 												</div>
 												<div class="lqd-column col-md-12">
+													<label for="phone">Phone:</label>
+													<input type="tel" id="phone" name="phone" aria-required="true" 
+														   placeholder="(123) 456-7890" 
+														   pattern="[\(]\d{3}[\)]\s\d{3}[\-]\d{4}"
+														   title="Please enter phone number in format: (123) 456-7890"
+														   required>
+												</div>
+												<div class="lqd-column col-md-12">
 													<label for="message">Your Message:</label>
 													<textarea cols="10" rows="3" id="message" name="message"
 														aria-required="true" placeholder="Your Message"
@@ -757,24 +765,33 @@
 											const successMessage = document.getElementById("success-message");
 											const errorMessage = document.getElementById("error-message");
 
+											// Function to format phone number as user types
+											const phoneInput = document.getElementById("phone");
+											phoneInput.addEventListener('input', function(e) {
+												let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+												e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+											});
+
 											// Function to check if all required fields are filled
 											const checkFormValidity = () => {
-												const isFormValid = form.checkValidity(); // Use built-in form validation
-												submitBtn.disabled = !isFormValid; // Toggle 'disabled' based on form validity
+												const isFormValid = form.checkValidity();
+												submitBtn.disabled = !isFormValid;
 											};
 
 											// Function to reset the form and show a success message
 											const handleSuccess = () => {
-												form.reset(); // Reset the form
-												successMessage.style.display = "block"; // Show success message
+												form.reset();
+												successMessage.style.display = "block";
 												setTimeout(() => {
-													successMessage.style.display = "none"; // Hide success message after a few seconds
-												}, 3000); // Change the timeout duration as needed
+													successMessage.style.display = "none";
+												}, 3000);
 											};
 
 											// Function to handle form submission
 											const handleFormSubmission = (event) => {
-												event.preventDefault(); // Prevent default form submission
+												event.preventDefault();
+												
+												// Create FormData object
 												const formData = new FormData(form);
 
 												// Send the form data using fetch
@@ -782,17 +799,20 @@
 													method: "POST",
 													body: formData,
 												})
-													.then((response) => {
-														if (response.ok) {
-															handleSuccess(); // Show success message and reset the form
-														} else {
-															throw new Error("Error submitting the form");
-														}
-													})
-													.catch((error) => {
-														errorMessage.style.display = "block"; // Show error message
-														console.error(error);
-													});
+												.then((response) => {
+													if (response.ok) {
+														handleSuccess();
+													} else {
+														throw new Error("Error submitting the form");
+													}
+												})
+												.catch((error) => {
+													errorMessage.style.display = "block";
+													console.error(error);
+													setTimeout(() => {
+														errorMessage.style.display = "none";
+													}, 3000);
+												});
 											};
 
 											// Attach event listeners to input fields
